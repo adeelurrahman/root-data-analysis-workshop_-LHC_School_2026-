@@ -1,4 +1,4 @@
-#Assignments
+Assignments
 
 Submission includes the edited macro, the resulting plot, and a short explanation of the statistical choice you made.
 
