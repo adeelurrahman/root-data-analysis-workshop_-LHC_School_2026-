@@ -47,17 +47,6 @@ These instructions were checked against the official [ROOT installation page](ht
 
 If you add `source /absolute/path/to/software/root/bin/thisroot.sh` to `.bashrc`, do it only once. Mixing setup scripts from several ROOT installations is a common source of Cling and PyROOT failures.
 
-### Windows
-
-Choose a binary built for your installed Visual Studio toolchain. After unpacking ROOT, open a matching Visual Studio Developer Command Prompt and run:
-
-```bat
-C:\root\bin\thisroot.bat
-root
-```
-
-In PowerShell, use `C:\root\bin\thisroot.ps1` instead.
-
 ## Method 2: build from source
 
 The commands below create separate source, build, and installation directories. ROOT does not support building directly inside its source tree.
@@ -128,29 +117,3 @@ cmake -S root_src -B root_build \
   -Droofit=ON \
   -Dtmva=ON
 ```
-
-Use `cmake -LAH -N root_build` to inspect cached options. Do not enable every component unless the workshop or project actually needs it.
-
-## Troubleshooting
-
-### The wrong ROOT starts
-
-```bash
-type -a root
-command -v root-config
-echo "$ROOTSYS"
-```
-
-Open a clean terminal and source only the intended `thisroot.sh`.
-
-### A binary will not start
-
-The archive may target a different distribution, compiler runtime, CPU architecture, or Python version. Download the closest matching build or compile ROOT locally.
-
-### CMake disables a feature
-
-Read the configuration summary, install the missing development package, and rerun the same `cmake -S ... -B ...` command. The cache preserves previous choices.
-
-### PyROOT imports the wrong Python
-
-Configure ROOT while the desired virtual environment is active, or pass an appropriate `Python3_ROOT_DIR`. ROOT uses CMake's Python discovery during the build.
