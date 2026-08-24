@@ -47,14 +47,6 @@ These instructions were checked against the official [ROOT installation page](ht
 
 If you add `source /absolute/path/to/software/root/bin/thisroot.sh` to `.bashrc`, do it only once. Mixing setup scripts from several ROOT installations is a common source of Cling and PyROOT failures.
 
-### macOS
-
-Download a binary that matches the macOS release and architecture, unpack it, and source `bin/thisroot.sh` as above. The package-manager alternative is:
-
-```bash
-brew install root
-```
-
 ### Windows
 
 Choose a binary built for your installed Visual Studio toolchain. After unpacking ROOT, open a matching Visual Studio Developer Command Prompt and run:
