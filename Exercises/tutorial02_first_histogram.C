@@ -28,7 +28,6 @@ void tutorial02_first_histogram()
     histogram.SetFillColor(kAzure - 9);
     histogram.SetLineColor(kAzure + 2);
     histogram.Draw("hist");
-    canvas.Draw();	
     canvas.SaveAs("tutorial02_first_histogram.png");
 }
 
