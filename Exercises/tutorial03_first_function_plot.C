@@ -22,6 +22,7 @@ void tutorial03_first_function_plot()
     TCanvas canvas("canvas", "First function plot", 800, 600);
     dampedWave.Draw();
     canvas.SetGrid();
+    canvas.Draw();
     canvas.SaveAs("tutorial03_first_function_plot.png");
 }
 
